@@ -1,3 +1,5 @@
+#@title Write Script Preprocess Data and Generate Fast-text Embeddings
+%%writefile preprocess_data.sh
 # Copyright (c) 2018-present, Facebook, Inc.
 # All rights reserved.
 #
@@ -91,11 +93,11 @@ MONO_PATH3=$DATA_PATH/sr_bos
 
 SRC_RAW1=$MONO_PATH1/train_1.txt
 SRC_RAW2=$MONO_PATH2/train_1.txt
-SRC_RAW3=$MONO_PATH3/train_1.txt
+SRC_RAW3=$MONO_PATH3/train_1.spm32000.txt
 
 TGT_RAW1=$MONO_PATH1/train_0.txt
 TGT_RAW2=$MONO_PATH2/train_0.txt
-TGT_RAW3=$MONO_PATH3/train_0.txt
+TGT_RAW3=$MONO_PATH3/train_0.spm32000.txt
 
 # Vocab Files
 
@@ -119,19 +121,19 @@ FULL_VOCAB3=$MONO_PATH3/full_vocab
 
 SRC_TEST1=$MONO_PATH1/test_1.txt
 SRC_TEST2=$MONO_PATH2/test_1.txt
-SRC_TEST3=$MONO_PATH3/test_1.txt
+SRC_TEST3=$MONO_PATH3/test_1.spm32000.txt
 
 TGT_TEST1=$MONO_PATH1/test_0.txt
 TGT_TEST2=$MONO_PATH2/test_0.txt
-TGT_TEST3=$MONO_PATH3/test_0.txt
+TGT_TEST3=$MONO_PATH3/test_0.spm32000.txt
 
 SRC_VALID1=$MONO_PATH1/dev_1.txt
 SRC_VALID2=$MONO_PATH2/dev_1.txt
-SRC_VALID3=$MONO_PATH3/dev_1.txt
+SRC_VALID3=$MONO_PATH3/dev_1.spm32000.txt
 
 TGT_VALID1=$MONO_PATH1/dev_0.txt
 TGT_VALID2=$MONO_PATH2/dev_0.txt
-TGT_VALID3=$MONO_PATH3/dev_0.txt
+TGT_VALID3=$MONO_PATH3/dev_0.spm32000.txt
 
 echo "Extracting vocabulary..."
 cat $SRC_RAW1 | $FASTBPE getvocab - >$SRC_VOCAB1

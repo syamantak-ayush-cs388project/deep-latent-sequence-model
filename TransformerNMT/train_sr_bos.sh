@@ -1,5 +1,5 @@
-MONO_DATASET='0:./data/sr_bos/train_0.txt.pth,,;1:./data/sr_bos/train_1.txt.pth,,'
-PARA_DATASET='0-1:,./data/sr_bos/dev_X.txt.pth,./data/sr_bos/test_X.txt.pth'
+MONO_DATASET='0:./data/sr_bos/train_0.spm32000.txt.pth,,;1:./data/sr_bos/train_1.spm32000.txt.pth,,'
+PARA_DATASET='0-1:,./data/sr_bos/dev_X.spm32000.txt.pth,./data/sr_bos/test_X.spm32000.txt.pth'
 PRETRAINED='./data/sr_bos/all.256.vec'
 
 python main.py \

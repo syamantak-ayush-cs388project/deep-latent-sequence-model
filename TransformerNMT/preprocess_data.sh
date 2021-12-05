@@ -1,5 +1,3 @@
-#@title Write Script Preprocess Data and Generate Fast-text Embeddings
-%%writefile preprocess_data.sh
 # Copyright (c) 2018-present, Facebook, Inc.
 # All rights reserved.
 #

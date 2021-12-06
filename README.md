@@ -73,6 +73,14 @@ To run the code on your own dataset, you need to create a new configuration file
 
 Train LSTM classifiers: see `./scripts/train_classifer.sh` for an example to tain an LSTM classifer on shakespeare dataset.
 
+## Train Transformer Baseline
+
+To run the transformer baseline, follow the instructions below : 
+
+1. Download all data - `python3 prepare_data.py --dataset all`
+2. Preprocess all data - `chmod 775 preprocess_data.sh && ./preprocess_data.sh`
+3. To train the shakespeare model - `chmod 775 train_shakespeare.sh && ./train_shakespeare.sh`
+4. To train the serbian-bosnina model - `chmod 775 train_sr_bos.sh && ./train_sr_bos.sh`
 
 ## Acknowledgement
 

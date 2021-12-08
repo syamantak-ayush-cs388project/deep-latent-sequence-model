@@ -306,9 +306,9 @@ if args.output_dir == "":
     avg = "_avglen" if args.avg_len else ""
     dual_str = "_dual" if args.dual else ""
 
-    args.output_dir = "outputs_{}{}/{}_wd{}_wb{}_ws{}_an{}_pool{}_klw{}_lr{}_{}{}{}{}{}{}{}{}/".format(args.dataset, dual_str, args.dataset,
+    args.output_dir = "outputs_{}{}/{}_wd{}_wb{}_ws{}_an{}_pool{}_klw{}_lr{}_bs{}_dmodel{}_dropout{}_{}{}{}{}{}{}{}{}/".format(args.dataset, dual_str, args.dataset,
         args.word_dropout, args.word_blank, args.word_shuffle, args.anneal_epoch,
-        args.max_pool_k_size, args.klw, args.lr, dn, lm, bt, decode_y, gs_str, gs_soft,
+        args.max_pool_k_size, args.klw, args.lr, args.batch_size, args.d_model, args.dropout, dn, lm, bt, decode_y, gs_str, gs_soft,
         bt_stop_grad, avg)
 
 args.device = torch.device("cuda" if args.cuda else "cpu")
